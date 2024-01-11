@@ -11,7 +11,7 @@
 
 			<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
 			<a class="btn btn-outline-success" href="#">View</a>
-			<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+			<h4 style="display: inline-block; float: right"><strong>£{{product.price}}</strong></h4>
 
 	     </div>
      </div>
@@ -20,7 +20,7 @@
 <div class="cart-row">
 	<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
 	<div style="flex:2"><p>{{item.product.name}}</p></div>
-	<div style="flex:1"><p>${{item.product.price|floatformat:2}}</p></div>
+	<div style="flex:1"><p>£{{item.product.price|floatformat:2}}</p></div>
 	<div style="flex:1">
 		<p class="quantity">{{item.quantity}}</p>
 		<div class="quantity">
@@ -29,7 +29,7 @@
 			<img class="chg-quantity" src="{% static  'images/arrow-down.png' %}">
 		</div>
 	</div>
-	<div style="flex:1"><p>$32</p></div>
+	<div style="flex:1"><p>£32</p></div>
 </div>
 {% endfor %}
 
