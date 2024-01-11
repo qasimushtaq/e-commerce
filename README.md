@@ -1,39 +1,92 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+It is an E-commerce system built in Django. It contains all the essentials for adding products and use PayPal to pay for the purchase. 
 
-Welcome,
+#### The Business Objectives
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+1. To develop an online presence.
+2. Increase business awareness.
+3. Expand the target audience reach.
+4. To showcase the products business sell.
+5. Provide easily accessible information to customers.
+6. To develop online communication with our customer base.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+#### Customer Objectives
 
-## Codeanywhere Reminders
+1. To gain access to business information.
+2. To access business and buy stuff.
+3. To be able to get add and remove products from the cart.
+4. To see the total in cart.
+5. Easily pay for the products.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+##### Future goals
 
-`python3 -m http.server`
+* Ability to develop a complete full store with different products and information about the store.
+* To develop a system so that customer join online and earn points by membership.
+* To Create further pages for a complete working site.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+This application is for customers, to provide a small number of products. 
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Functionality
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+1. User- Built in Django user model. An instance of this model will be created for each customer that registers with our website. This model will give us the ability to later use Djangos default authentication system without having to manually set this up ourselves.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+2. Customer - Along with a User model each customer will contain a Customer model that holds a one to one relationship to each user. (OneToOneField). 
 
-To log into the Heroku toolbelt CLI:
+3. Product - The product model represents products we have in store.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+4 .Order - The order model will represent a transaction that is placed or pending. The model will hold information such as the transaction ID, data completed and order status. This model will be a child or the customer model but a parent to Order Items.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+5 .OrderItem- An order Item is one item with an order. So for example a shopping cart may consist of many items but is all part of one order. Therefore the OrderItem model will be a child of the PRODUCT model AND the ORDER Model.
 
----
+6. ShippingAddress- Not every order will need shipping information. For orders containing physical products that need to be shipping we will create an instance of the shipping model to know where to send the order. Shipping will simply be a child of the order model when necessary.
 
-Happy coding!
+## Features
+
+* Store
+* Cart
+* Checkout
+* Shipping
+* Payment Option
+
+### Features Left to Implement
+
+- online system to join 
+* membership
+
+## Technologies Used
+
+* Django (latest Version-4.0)
+* CSS
+* Bootstrap
+* Basic HTML
+* Javascript
+
+## Testing
+
+* The project has been tested thoroughly to the best of my knowledge. The navbar has been functional. 
+* The desktop version of the project has been working.
+* The mobile version is working.
+* The CSS has been validated by W3Schools Validator and no error was found.
+
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
+
+## Credits
+
+* Codeinstitute tutorials 
+* Google Images 
+* w3school
+
+
+### Content
+
+* The images has been taken from google images .
+* [W3Schools](w3schools.com) is used to get help for the project.
+
